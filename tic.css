@@ -1,113 +1,45 @@
-h1 { 
-	color: orangered; 
-	margin-bottom: -5px; 
-} 
-p { 
-	margin-bottom: -10px; 
-} 
-.ui { 
-	display: flex; 
-	flex-direction: column; 
-	align-items: center; 
-} 
-.row { 
-	display: flex; 
-} 
-.cell { 
-	border: none; 
-	width: 80px; 
-	height: 80px; 
-	display: flex; 
-	align-items: center; 
-	justify-content: center; 
-	font-size: 24px; 
-	text-align: center; 
-	cursor: pointer; 
-} 
-.cell:active { 
-	outline: none; 
-} 
-/* 3*3 Grid */
-#b1{ 
-	border-bottom: 1px solid gray; 
-	border-right: 1px solid gray; 
-} 
-
-#b2 { 
-	border-bottom: 1px solid gray; 
-	border-right: 1px solid gray; 
-	border-left: 1px solid gray; 
-} 
-
-#b3 { 
-	border-bottom: 1px solid gray; 
-	border-left: 1px solid gray; 
-} 
-
-#b4 { 
-	border-top: 1px solid gray; 
-	border-bottom: 1px solid gray; 
-	border-right: 1px solid gray; 
-} 
+body {
+	background-image: url('pic/backgroud.jpg');
 	
-#b5 { 
-	border: 1px solid gray; 
-} 
+}
+/* Style the container with a rounded border, grey background and some padding and margin */
+.container {
+  border: 2px solid #ccc;
+  background-color: #eee;
+  border-radius: 5px;
+  
+  padding-right : 100px ; 
+  padding-left : 16px ; 
+  padding-top : 16px ; 
+  padding-bottom : 16px ; 
+  
+  margin: 16px 0;
+  
+}
 
-#b6 { 
-	border-top: 1px solid gray; 
-	border-bottom: 1px solid gray; 
-	border-left: 1px solid gray; 
-} 
+/* Clear floats after containers */
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
-#b7 { 
-	border-top: 1px solid gray; 
-	border-right: 1px solid gray; 
-} 
+/* Float images inside the container to the left. Add a right margin, and style the image as a circle */
+.container img {
+  float: left;
+  margin-right: 20px;
+  border-radius: 50%;
+}
 
-#b8 { 
-	border-top: 1px solid gray; 
-	border-right: 1px solid gray; 
-	border-left: 1px solid gray; 
-} 
+/* Add media queries for responsiveness. This will center both the text and the image inside the container */
+@media (max-width: 500px) {
+  .container {
+    text-align: center;
+  }
 
-#b9 { 
-	border-top: 1px solid gray; 
-	border-left: 1px solid gray; 
-} 
-/* Reset Button */
-#but { 
-	box-sizing: border-box; 
-	width: 95px; 
-	height: 40px; 
-	border: 1px solid dodgerblue; 
-	margin-left: auto; 
-	border-radius: 8px; 
-	font-family: Verdana, 
-		Geneva, Tahoma, sans-serif; 
-
-	background-color: whitesmoke; 
-	color: dodgerblue; 
-	font-size: 20px; 
-	cursor: pointer; 
-} 
-
-/* Player turn space */
-#print { 
-	font-family: Verdana, 
-		Geneva, Tahoma, sans-serif; 
-	color: dodgerblue; 
-	font-size: 20px; 
-} 
-
-/* Main Container */
-#main { 
-	text-align: center; 
-} 
-
-/* Game Instruction Text */
-#ins { 
-	font-family: Verdana,Geneva, 
-					Tahoma, sans-serif; 
-	color: dodgerblue; 
+  .container img {
+    margin: auto;
+    float: none;
+    display: block;
+  }
 }
