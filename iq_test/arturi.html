@@ -7,17 +7,13 @@
 </head>
 <body>
     <h1>Play Video from Google Drive</h1>
-    <video width="1280" height="720" controls>
-        <source id="videoSource" src="" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+    <iframe id="videoFrame" width="1280" height="720" src="" frameborder="0" allowfullscreen></iframe>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var videoSource = document.getElementById("videoSource");
-            var driveLink = "https://drive.google.com/file/d/1dsFatKCE7EiNbADWLx190ORfStjZNSgV/view?usp=sharing";
-            var formattedLink = driveLink.replace("file/d/", "uc?id=").replace("/view?usp=sharing", "");
-            videoSource.src = formattedLink;
+            var videoId = "1dsFatKCE7EiNbADWLx190ORfStjZNSgV"; // Extracted from your Google Drive link
+            var embedLink = "https://drive.google.com/file/d/" + videoId + "/preview";
+            document.getElementById("videoFrame").src = embedLink;
         });
     </script>
 </body>
