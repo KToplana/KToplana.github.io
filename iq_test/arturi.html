@@ -8,15 +8,15 @@
 <body>
     <h1>Play Video from Google Drive</h1>
     <video width="1280" height="720" controls>
-        <source id="videoSource" src="https://drive.google.com/file/d/19ohJI1ZvUh-yaG4tJzlMvTXHG0F1oex_/view?usp=drive_link" type="video/mp4">
+        <source id="videoSource" src="" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             var videoSource = document.getElementById("videoSource");
-            var driveLink = videoSource.src;
-            var formattedLink = driveLink.replace("file/d/", "uc?id=").replace("/view?usp=drive_link", "");
+            var driveLink = "https://drive.google.com/file/d/1dsFatKCE7EiNbADWLx190ORfStjZNSgV/view?usp=sharing"; // Replace with your Google Drive link
+            var formattedLink = driveLink.replace("file/d/", "uc?id=").replace("/view?usp=sharing", "").replace("/view?usp=drive_link", "");
             videoSource.src = formattedLink;
         });
     </script>
