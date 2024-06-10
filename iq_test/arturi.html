@@ -15,8 +15,8 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             var videoSource = document.getElementById("videoSource");
-            var driveLink = "https://drive.google.com/file/d/1dsFatKCE7EiNbADWLx190ORfStjZNSgV/view?usp=sharing"; // Replace with your Google Drive link
-            var formattedLink = driveLink.replace("file/d/", "uc?id=").replace("/view?usp=sharing", "").replace("/view?usp=drive_link", "");
+            var driveLink = "https://drive.google.com/file/d/1dsFatKCE7EiNbADWLx190ORfStjZNSgV/view?usp=sharing";
+            var formattedLink = driveLink.replace("file/d/", "uc?id=").replace("/view?usp=sharing", "");
             videoSource.src = formattedLink;
         });
     </script>
