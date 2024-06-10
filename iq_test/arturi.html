@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Google Drive Video</title>
+</head>
+<body>
+    <h1>Play Video from Google Drive</h1>
+    <video width="640" height="480" controls>
+        <source src="YOUR_GOOGLE_DRIVE_VIDEO_LINK" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <script>
+        // Ensure the video link is formatted correctly
+        document.addEventListener("DOMContentLoaded", function() {
+            var videoSource = document.querySelector("source");
+            var driveLink = videoSource.src;
+            var formattedLink = driveLink.replace("file/d/", "uc?id=").replace("/view?usp=sharing", "");
+            videoSource.src = formattedLink;
+        });
+    </script>
+</body>
+</html>
